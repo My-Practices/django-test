@@ -12,7 +12,7 @@ class Animal(models.Model):
         verbose_name = "Animal"
         verbose_name_plural = "Animals"
 
-    def __strs_(self):
+    def __str__(self):
         return self.name
 
     def speak(self):

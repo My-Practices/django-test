@@ -15,3 +15,6 @@ class AnimalTestCase(TestCase):
         cat = Animal.objects.get(name="cat")
         self.assertEqual(lion.speak(), 'The lion says "roar"')
         self.assertEqual(cat.speak(), 'The cat says "meow"')
+    def test_srt(self):
+        lion = Animal.objects.get(name="lion")
+        self.assertAlmostEqual(lion.__str__(),"lion")
