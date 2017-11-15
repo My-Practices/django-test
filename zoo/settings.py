@@ -42,10 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_jenkins'
 ]
-PROJECTS_APPS = [
+PROJECT_APPS  = [
     'animal'
 ]
-INSTALLED_APPS = INSTALLED_APPS + PROJECTS_APPS
+INSTALLED_APPS = INSTALLED_APPS + PROJECT_APPS
 # http://django-jenkins.readthedocs.io/en/latest/
 JENKINS_TASKS = (
     'django_jenkins.tasks.run_pep8',
