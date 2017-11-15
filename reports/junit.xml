@@ -1,1 +1,7 @@
-<testsuite errors="0" failures="0" name="Django Project Tests" skips="0" tests="2" time="0.000"><testcase classname="animal.tests.AnimalTestCase" name="test_animals_can_speak" time="0.000000" /><testcase classname="animal.tests.AnimalTestCase" name="test_srt" time="0.000000" /></testsuite>
+<testsuite errors="1" failures="0" name="Django Project Tests" skips="0" tests="1" time="0.000"><testcase classname="unittest.loader._FailedTest" name="reportt" time="0.000000"><error message="Failed to import test module: reportt&#10;Traceback (most recent call last):&#10;  File &quot;C:\Python\Python36-32\lib\unittest\loader.py&quot;, line 153, in loadTestsFromName&#10;    module = __import__(module_name)&#10;ModuleNotFoundError: No module named 'reportt'&#10;" type="builtins.ImportError">ImportError: Failed to import test module: reportt
+Traceback (most recent call last):
+  File "C:\Python\Python36-32\lib\unittest\loader.py", line 153, in loadTestsFromName
+    module = __import__(module_name)
+ModuleNotFoundError: No module named 'reportt'
+
+</error></testcase></testsuite>
