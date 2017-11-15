@@ -10,12 +10,12 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -28,6 +28,7 @@ DEBUG = True
 
 # Application definition
 
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,8 +40,20 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'django_jenkins'
+]
+PROJECTS_APPS = [
     'animal'
 ]
+INSTALLED_APPS = INSTALLED_APPS + PROJECTS_APPS
+# http://django-jenkins.readthedocs.io/en/latest/
+JENKINS_TASKS = (
+    'django_jenkins.tasks.run_pep8',
+    'django_jenkins.tasks.run_pyflakes',
+    # 'django_jenkins.tasks.run_jslint',
+    # 'django_jenkins.tasks.run_csslint',
+    # 'django_jenkins.tasks.run_sloccount'
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -73,7 +86,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'zoo.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases

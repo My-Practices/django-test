@@ -4,3 +4,7 @@ gunicorn==19.6.0
 psycopg2==2.6.2
 whitenoise==3.2
 coverage
+jslint
+pep8
+pylint
+pyflakes
