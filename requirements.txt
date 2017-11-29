@@ -8,3 +8,4 @@ jslint
 pep8
 pylint
 pyflakes
+django-jenkins
